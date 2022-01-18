@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marks Predictor</title>
+</head>
+<body>
+	<div class="container">
+		<div class="alert warning">
+			<center><h1>Get your Marks Prediction</h1></center>		
+		</div>
+		<br>
+		<!-- action ="/" means we doing the get and post request on the same web page -->
+		<form method="POST" action="/">
+			<label>How many hours did you study?</label>
+			<input type="text" name="hours" placeholder="Fill Hours">
+			<input type="submit">
+			<!-- <button>Get Score</button> -->	
+		</form>
+		<!-- The below heading will be visible only when there is some value in your_marks -->
+		{% if your_marks%}
+			<h1> Your marks are: <i> {{your_marks}} </i> </h1>
+		{% endif %}
+	</div>
+</body>
+</html>
+
